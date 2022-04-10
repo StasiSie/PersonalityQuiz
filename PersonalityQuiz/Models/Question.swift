@@ -15,30 +15,30 @@ struct Question {
             Question(
                 title: "Что едите?",
                 answers: [
-                    Answer(title: "Steik", animal: .dog),
-                    Answer(title: "Ryba", animal: .cat),
-                    Answer(title: "Kukuruza", animal: .turtle),
-                    Answer(title: "Morkovka", animal: .rabbit)
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыбы", animal: .cat),
+                    Answer(title: "Кукуруза", animal: .turtle),
+                    Answer(title: "Морковока", animal: .rabbit)
                 ],
                 type: .single
             ),
             Question(
                 title: "Что предпочитаете?",
                 answers: [
-                    Answer(title: "Plavat'", animal: .dog),
-                    Answer(title: "Spat'", animal: .cat),
-                    Answer(title: "Est'", animal: .turtle),
-                    Answer(title: "Obnimatsya", animal: .rabbit)
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Есть", animal: .turtle),
+                    Answer(title: "Обниматься", animal: .rabbit)
                 ],
                 type: .multiple
             ),
             Question(
                 title: "Любите поездки на машине?",
                 answers: [
-                    Answer(title: "Da", animal: .dog),
-                    Answer(title: "Navernoe da", animal: .cat),
-                    Answer(title: "Navernoe net", animal: .turtle),
-                    Answer(title: "Net", animal: .rabbit)
+                    Answer(title: "Да", animal: .dog),
+                    Answer(title: "Наверное да", animal: .cat),
+                    Answer(title: "Наверное нет", animal: .turtle),
+                    Answer(title: "Нет", animal: .rabbit)
                 ],
                 type: .range
             )
@@ -66,13 +66,13 @@ enum Animal: Character {
     var definition: String {
         switch self {
         case .dog:
-            return "Sobaka"
+            return "Песики любят стейки, плавать и одназначно кататься на машине"
         case .cat:
-            return "Kot"
+            return "Котики любят рыбу, спать и возможно кататься на машине"
         case .turtle:
-            return "Tscherepacha"
+            return "Черепахи любят есть, особенно кукурузу, но вот кататься на машине скорее не любят"
         case .rabbit:
-            return "Krolik"
+            return "Кролики жуют морковку, очень любят обниматься, но очень не любять поездки на машине"
         }
     }
 }

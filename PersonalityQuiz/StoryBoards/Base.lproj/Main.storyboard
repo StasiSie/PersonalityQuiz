@@ -269,13 +269,7 @@
                             <constraint firstItem="hgE-GG-q9H" firstAttribute="leading" secondItem="mcn-cM-YAx" secondAttribute="leading" id="pTs-5B-L48"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="7gQ-ml-cIJ">
-                        <barButtonItem key="rightBarButtonItem" title="В конец" id="N67-hs-cQ1">
-                            <connections>
-                                <segue destination="kRm-mC-zUc" kind="show" id="7bT-SI-ppB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="7gQ-ml-cIJ"/>
                     <connections>
                         <outlet property="multipleStackView" destination="2hv-wf-xoa" id="SoP-SU-x8T"/>
                         <outlet property="questionLabel" destination="9JA-Ab-D84" id="Jcs-gt-E7u"/>
@@ -333,14 +327,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="vZk-g7-4Rs">
                                 <rect key="frame" x="16" y="239.5" width="288" height="89.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-CM-y7e">
-                                        <rect key="frame" x="64" y="0.0" width="160.5" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-CM-y7e">
+                                        <rect key="frame" x="138.5" y="0.0" width="11.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОПИСАНИЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-eK-yDB">
-                                        <rect key="frame" x="96.5" y="69" width="95" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-eK-yDB">
+                                        <rect key="frame" x="141.5" y="69" width="5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -360,10 +354,14 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="zhd-ab-HWb"/>
                         <barButtonItem key="rightBarButtonItem" title="Готово" id="OCe-fh-7Py">
                             <connections>
-                                <segue destination="93u-0d-jse" kind="unwind" unwindAction="unwindFor:" id="ZXc-B2-qsj"/>
+                                <segue destination="93u-0d-jse" kind="unwind" unwindAction="unwindWithSegue:" id="DWl-11-KWV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="defenitionLabel" destination="nwA-CM-y7e" id="ASJ-qV-ogo"/>
+                        <outlet property="descriptionLabel" destination="OVU-eK-yDB" id="7QK-t6-5VM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VU2-Yv-cz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="93u-0d-jse" userLabel="Exit" sceneMemberID="exit"/>
@@ -371,9 +369,6 @@
             <point key="canvasLocation" x="2183" y="78"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="2m0-kJ-o5p"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
